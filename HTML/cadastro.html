@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Jogador</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container mt-5">
@@ -21,18 +21,44 @@
       </div>
       <div class="form-group">
         <label for="sexo">Sexo</label>
-        <select id="sexo" class="form-control">
+        <select id="sexo" class="form-control" required>
+          <option value="">Selecione o Sexo</option>
           <option value="Masculino">Masculino</option>
           <option value="Feminino">Feminino</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="posicao">Posição</label>
-        <input type="text" id="posicao" class="form-control" required>
+        <label for="position">Posição</label>
+        <select id="position" class="form-control" required>
+          <option value="">Selecione a Posição</option>
+          <option value="levantador">Levantador</option>
+          <option value="central">Central</option>
+          <option value="oposto">Oposto</option>
+          <option value="ponteiro">Ponteiro</option>
+          <option value="libero">Líbero</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" class="form-control" required>
+        <input type="tel" id="telefone" class="form-control" placeholder="(XX) XXXXX-XXXX" required>
+      </div>
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        <select id="estado" class="form-control" required>
+          <option value="">Selecione o Estado</option>
+          <!-- Os estados serão carregados dinamicamente -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cidade">Cidade</label>
+        <select id="cidade" class="form-control" required>
+          <option value="">Selecione a Cidade</option>
+          <!-- As cidades serão carregadas dinamicamente -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="photo">Foto</label>
+        <input type="file" class="form-control-file" id="photo">
       </div>
       <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
@@ -61,7 +87,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/script.js"></script>
-
+  <script src="/js/ibge.js"></script>
 </body>
 </html>
+
 
